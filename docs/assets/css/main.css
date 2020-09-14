@@ -1,0 +1,81 @@
+.markdown-section iframe[src*="buttons.github.io"] {
+    margin: 0;
+}
+
+figure.thumbnails img {
+    margin: 0.75em 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@media (min-width: 30em) {
+    figure.thumbnails:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    figure.thumbnails img {
+        float: left;
+        width: calc(50% - 0.75em);
+    }
+
+    figure.thumbnails img:nth-child(even) {
+        margin-left: 1.5em;
+    }
+
+    @supports (display: flex) {
+        figure.thumbnails {
+            display: flex;
+            align-items: center;
+        }
+
+        figure.thumbnails img {
+            flex-grow: 1;
+            width: 0;
+        }
+
+        figure.thumbnails img + img {
+            margin: 0 0 0 1.5em;
+        }
+    }
+}
+
+.cover-main h1 span {
+    margin-left: -0.75em;
+    /* filter: invert(100%); */
+}
+
+.cover-main h1 span img {
+    position: relative;
+    vertical-align: text-bottom;
+    width: 1.2em;
+    /* filter: invert(100%); */
+}
+
+.cover-main blockquote {
+    color: white;
+}
+
+span span.api-method {
+    color: white;
+    background-color: teal;
+    padding: 3px 5px 3px 5px;
+    border-radius: 4px;
+}
+
+span.endpoint {
+    font-weight: 400;
+    font-size: var(--font-size-xl);
+}
+
+span.api-method {
+    color: white;
+    background-color: teal;
+    padding: 3px 5px 3px 5px;
+    border-radius: 4px;
+}
+
+h3 a span {
+    display: none;
+}
